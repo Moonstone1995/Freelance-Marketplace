@@ -1,5 +1,23 @@
 {
-  "users": [],
+  "users": [
+    {
+      "firstname": "great",
+      "lastname": "wow",
+      "id": 1
+    },
+    {
+      "firstname": "Michael ",
+      "lastname": "Johnson ",
+      "username": "Mikko",
+      "gender": "option1",
+      "email": "example@yahoo.com",
+      "password": "jbrgub",
+      "field": "Education & Training",
+      "price": "option1",
+      "details": "jiifinf",
+      "id": 2
+    }
+  ],
   "post": [],
   "comment": []
 }
