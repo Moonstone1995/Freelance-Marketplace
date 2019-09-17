@@ -11,10 +11,31 @@
     <header>
       <h4>Sign Up Your Account</h4>    
     </header>
-    <form>
+    <form>        
+      <div class="form-row">
+        <div class="col">
+          <input type="text" class="form-control" placeholder="First name">
+        </div>
+        <div class="col">
+          <input type="text" class="form-control" placeholder="Last name">
+        </div>
+      </div>
+      
+      <div class="form-row">
+        <div class="col-7">
+          <input type="text" class="form-control" placeholder="Username">
+        </div>
+        <div class="col">
+          <input type="text" class="form-control" placeholder="State of Residence">
+        </div>
+        <div class="col">
+          <input type="text" class="form-control" placeholder="Age">
+        </div>
+      </div>
+        
       <label for="exampleFormControlSelect2">Gender:</label>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked>
         <label class="form-check-label" for="inlineRadio1">Male</label>
       </div>
       <div class="form-check form-check-inline">
@@ -68,7 +89,7 @@
         </label>
       </div>
       <div class="form-group">
-        <label for="exampleFormControlTextarea1">Example textarea</label>
+        <label for="exampleFormControlTextarea1">Tell Us Something About Yourself</label>
         <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
       </div>
     </form>
