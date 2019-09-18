@@ -74,5 +74,15 @@ $(document).ready(function() {
         }
       }
     })
-  })
+  });
+
+  //logout function
+  $('.logoutBtn').click(function() {
+    event.preventDefault();
+    localStorage.clear(); //This clears the local storage
+    alert('You are logged out');
+    window.location.assign('signin.html');
+  });
+
+  //Update function 
 })
