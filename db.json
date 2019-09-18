@@ -1,5 +1,5 @@
 {
-  "users": [    
+  "users": [
     {
       "firstname": "Michael ",
       "lastname": "Johnson ",
@@ -11,6 +11,62 @@
       "price": "$10 / hour",
       "details": "I'm great!",
       "id": 1
+    },
+    {
+      "firstname": "Mike",
+      "lastname": "John",
+      "username": "Mikejohn",
+      "state": "Lagos",
+      "age": "12",
+      "gender": "Male",
+      "email": "forexample@gmail.com",
+      "password": "well",
+      "field": "Analyst",
+      "price": "$10 / hour",
+      "details": "Seems okay!",
+      "id": 2
+    },
+    {
+      "firstname": "Michelle",
+      "lastname": "Daniels",
+      "username": "myprettydamsel",
+      "state": "Port Harcourt",
+      "age": "56",
+      "gender": "Male",
+      "email": "prettydamsel@hotmail.com",
+      "password": "holyshit",
+      "field": "Writer",
+      "price": "$10 / hour",
+      "details": "So lovely",
+      "id": 3
+    },
+    {
+      "firstname": "Kira",
+      "lastname": "Nakamura",
+      "username": "deadlykira",
+      "state": "",
+      "age": "",
+      "gender": "Male",
+      "email": "sample@gmail.com",
+      "password": "cvbnm",
+      "field": "Education & Training",
+      "price": "$10 / hour",
+      "details": "I'm quite the best!",
+      "id": 4
+    },
+    {
+      "firstname": "Chu",
+      "lastname": "Jung",
+      "username": "socute",
+      "state": "",
+      "age": "",
+      "gender": "Male",
+      "email": "sample@yahoo.com",
+      "password": "qwerty",
+      "field": "Accounting & Finance",
+      "price": "$10 / hour",
+      "details": "So damn good!",
+      "id": 5
     }
   ],
   "post": [],

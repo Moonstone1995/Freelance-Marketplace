@@ -13,31 +13,44 @@ $(document).ready(function() {
     let field = $('#fieldSelect').val();
     let price = $('#exampleRadios').val();
     let details = $('.form-control2').val();
-    if(!firstname){
-      alert("Fill up required fields")
-    } else {
-      $.ajax({
-        method: 'POST',
-        url: 'http://localhost:3000/users',
-        data: {
-          firstname,
-          lastname,
-          username,
-          state,
-          age,
-          gender,
-          email,
-          password,
-          field,
-          price,
-          details,
-        },
-        success: function(){
-          alert('Registration Successful')
+    if(!firstname||!lastname||!username||!email||!password||!details){
+      alert("Fill up required fields");
+      return;
+    }; 
+    $.ajax({
+      method: 'GET',
+      url: `http://localhost:3000/users?email=${email}`,
+      data: {email,},    
+      success: function(response){
+        if (response.length){
+          $('.signupMsg').html('User already exists');
+        } else {
+          $.ajax({
+            method: 'POST',
+            url: 'http://localhost:3000/users',
+            data: {
+              firstname,
+              lastname,
+              username,
+              state,
+              age,
+              gender,
+              email,
+              password,
+              field,
+              price,
+              details,
+            },
+            success: function(){
+              alert('Registration Successful');
+              window.location.assign('profile.html')
+            }
+          })
         }
-      });
-   };
-  });
+      }    
+    });
+   });
+
   // Sign-in function 
   $('.loginBtn').click(function(event){
     event.preventDefault();
@@ -54,13 +67,12 @@ $(document).ready(function() {
         if (response.length){
           $('.loginMsg').html('Login successful');
           localStorage.setItem('email', emailLogin);
-            $('.loginBtn').click(function () {
-              $('.profile-form').fadeIn();
-            });
+          alert('You are logged in');            
+          window.location.assign('profile.html');
         } else {
           $('.loginMsg').html('Username or password incorrect');
         }
       }
     })
   })
-});
+})
