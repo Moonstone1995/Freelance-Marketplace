@@ -54,12 +54,13 @@ $(document).ready(function() {
         if (response.length){
           $('.loginMsg').html('Login successful');
           localStorage.setItem('email', emailLogin);
-          window.location.assign('dashboard.html');
+            $('.loginBtn').click(function () {
+              $('.profile-form').fadeIn();
+            });
         } else {
           $('.loginMsg').html('Username or password incorrect');
         }
       }
     })
-
   })
 });
