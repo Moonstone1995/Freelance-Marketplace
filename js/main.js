@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  // Registration function 
   $('#input').click(function(event) {
     event.preventDefault();
     let firstname = $('#firstname').val();
@@ -37,4 +38,28 @@ $(document).ready(function() {
       });
    };
   });
+  // Sign-in function 
+  $('.loginBtn').click(function(event){
+    event.preventDefault();
+    const emailLogin = $('#emailLogin').val();
+    const passwordLogin = $('#passwordLogin').val();
+    $.ajax({
+      method: 'GET',
+      url: `http://localhost:3000/users?email=${emailLogin}&password=${passwordLogin}`,
+      data: {
+        email: emailLogin,
+        password: passwordLogin,
+      },
+      success: function(response){
+        if (response.length){
+          $('.loginMsg').html('Login successful');
+          localStorage.setItem('email', emailLogin);
+          window.location.assign('dashboard.html');
+        } else {
+          $('.loginMsg').html('Username or password incorrect');
+        }
+      }
+    })
+
+  })
 });
