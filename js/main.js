@@ -77,7 +77,7 @@ $(document).ready(function() {
   });
   
   // Creating a profile card 
-  function profile(){
+  function profileCard(){
     $.ajax({
       method:'GET',
       url: `http://localhost:3000/users`,
@@ -99,9 +99,39 @@ $(document).ready(function() {
       }
     })
   }
-  profile();  
+  profileCard();  
 
-    //logout function
+  //Update function 
+  // $('.updateBtn').click(function() {
+  //   event.preventDefault();
+  //   $.ajax({
+  //     method: 'PATCH',
+  //     url: `http://localhost:3000/users/`,
+  //     data: {isDeleted: false},
+  //     success: function(response){
+  //       console.log(response);
+  //     }
+  //   })
+  // })
+
+
+  //Delete function 
+  // $('.deleteBtn').click(function(){
+  //   event.preventDefault();
+  //   $.ajax({
+  //     type:'POST',
+  //     url: `http://localhost:3000/users/`,
+  //     data: {_method: 'DELETE'},
+  //     success: function (response){
+  //       console.log(response);
+  //         // delete response;
+  //         alert('Delete Successful');
+  //         // window.location.assign('index.html')          
+  //     }
+  //   })
+  // })
+  
+  //Logout function
   $('.logoutBtn').click(function() {
     event.preventDefault();
     localStorage.clear(); //This clears the local storage
@@ -109,4 +139,26 @@ $(document).ready(function() {
     window.location.assign('signin.html');
   });
 
+  //Creating a list table
+  function profile(){
+    $.ajax({
+      method:'GET',
+      url: `http://localhost:3000/users`,
+      success: function (response){
+        list = ''
+        $.each(response, function(index, value) {
+          list += `
+            <tr>
+              <td>${index + 1}</td>
+              <td>${value.firstname} ${value.lastname}</td>
+              <td>${value.gender}</td>
+              <td>${value.field}</td>
+              <td>${value.price}</td>
+            </tr>`;           
+        }) 
+        $('.all-list').html(list)       
+      },
+    })
+  }
+  profile();
 })
