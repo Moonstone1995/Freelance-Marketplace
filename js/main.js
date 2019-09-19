@@ -65,9 +65,8 @@ $(document).ready(function() {
       },
       success: function(response){
         if (response.length){
-          $('.loginMsg').html('Login successful');
           localStorage.setItem('email', emailLogin);
-          alert('You are logged in');            
+          alert('Login successful');            
           window.location.assign('profile.html');
         } else {
           $('.loginMsg').html('Username or password incorrect');
@@ -101,13 +100,13 @@ $(document).ready(function() {
   }
   profileCard();  
 
-  //Update function 
+  // Update function 
   // $('.updateBtn').click(function() {
   //   event.preventDefault();
   //   $.ajax({
   //     method: 'PATCH',
-  //     url: `http://localhost:3000/users/`,
-  //     data: {isDeleted: false},
+  //     url: `http://localhost:3000/users/10`, //The id has to be included 
+  //     data: {firstname: "Michelle", lastname: "Joe"},
   //     success: function(response){
   //       console.log(response);
   //     }
@@ -119,12 +118,12 @@ $(document).ready(function() {
   // $('.deleteBtn').click(function(){
   //   event.preventDefault();
   //   $.ajax({
-  //     type:'POST',
+  //     type:'GET',
   //     url: `http://localhost:3000/users/`,
   //     data: {_method: 'DELETE'},
   //     success: function (response){
   //       console.log(response);
-  //         // delete response;
+  //         delete response;
   //         alert('Delete Successful');
   //         // window.location.assign('index.html')          
   //     }
@@ -149,13 +148,13 @@ $(document).ready(function() {
         $.each(response, function(index, value) {
           list += `
             <tr>
-              <td>${index + 1}</td>
+              <td>${index + 1}</td> //td represents a data cell
               <td>${value.firstname} ${value.lastname}</td>
               <td>${value.gender}</td>
               <td>${value.field}</td>
               <td>${value.price}</td>
             </tr>`;           
-        }) 
+            }) 
         $('.all-list').html(list)       
       },
     })
