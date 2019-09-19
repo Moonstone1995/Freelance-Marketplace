@@ -67,6 +67,48 @@
       "price": "$10 / hour",
       "details": "So damn good!",
       "id": 5
+    },
+    {
+      "firstname": "Kim",
+      "lastname": "Jang",
+      "username": "dirtykim",
+      "state": "Lagos",
+      "age": "16",
+      "gender": "Male",
+      "email": "sodirty@kimworld.com",
+      "password": "dirtydirty",
+      "field": "Others",
+      "price": "$10 / hour",
+      "details": "I'm distinguishable....",
+      "id": 6
+    },
+    {
+      "firstname": "Chioma",
+      "lastname": "Ebube",
+      "username": "damsel-inred",
+      "state": "Imo",
+      "age": "25",
+      "gender": "Male",
+      "email": "chiomame@gmail.com",
+      "password": "cvbnm",
+      "field": "Analyst",
+      "price": "$10 / hour",
+      "details": "Yipee!",
+      "id": 7
+    },
+    {
+      "firstname": "Jackie",
+      "lastname": "Chan",
+      "username": "martialmaster",
+      "state": "Lagos",
+      "age": "50",
+      "gender": "Male",
+      "email": "ninja@fightworld.com",
+      "password": "great",
+      "field": "Others",
+      "price": "$10 / hour",
+      "details": "I'm so good at it!!!",
+      "id": 8
     }
   ],
   "post": [],

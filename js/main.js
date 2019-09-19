@@ -43,7 +43,7 @@ $(document).ready(function() {
             },
             success: function(){
               alert('Registration Successful');
-              window.location.assign('profile.html')
+              window.location.assign('signin.html')
             }
           })
         }
@@ -75,8 +75,33 @@ $(document).ready(function() {
       }
     })
   });
+  
+  // Creating a profile card 
+  function profile(){
+    $.ajax({
+      method:'GET',
+      url: `http://localhost:3000/users`,
+      success: function (response){
+        let emailAddress = window.localStorage.getItem('email');
+        $.each(response, function(index, value) {
+          if(value.email == emailAddress) {
+            profileCard = ''
+            profileCard += `<p>Name: ${value.firstname} ${value.lastname}</p>
+            <p>Username: ${value.username}</p>
+            <p>Gender: ${value.gender}</p>
+            <p>Email: ${value.email}</p>
+            <p>Field: ${value.field}</p>
+            <p>Price: ${value.price}</p>
+            <p>Details: ${value.details}</p>`;
+            $('.profile-card').append(profileCard);
+          }
+        })        
+      }
+    })
+  }
+  profile();  
 
-  //logout function
+    //logout function
   $('.logoutBtn').click(function() {
     event.preventDefault();
     localStorage.clear(); //This clears the local storage
@@ -84,5 +109,4 @@ $(document).ready(function() {
     window.location.assign('signin.html');
   });
 
-  //Update function 
 })
