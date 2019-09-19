@@ -7,11 +7,11 @@ $(document).ready(function() {
     let username = $('#username').val();
     let state = $('#state').val();
     let age = $('#age').val();
-    const gender = $('#inlineRadio').val();
+    const gender = $('input[name=RadioOptions]:checked').val();
     const email = $('#inputEmail').val();
     const password = $('#inputPassword').val();
     let field = $('#fieldSelect').val();
-    let price = $('#exampleRadios').val();
+    let price = $('input[name=exampleRadios]:checked').val();
     let details = $('.form-control2').val();
     if(!firstname||!lastname||!username||!email||!password||!details){
       alert("Fill up required fields");

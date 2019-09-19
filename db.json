@@ -109,6 +109,34 @@
       "price": "$10 / hour",
       "details": "I'm so good at it!!!",
       "id": 8
+    },
+    {
+      "firstname": "Chun",
+      "lastname": "Lang",
+      "username": "littlechun",
+      "state": "Benin",
+      "age": "14",
+      "gender": "Female",
+      "email": "qweas@yahoo.com",
+      "password": "point",
+      "field": "Education & Training",
+      "price": "$10 / hour",
+      "details": "I'm always excited...",
+      "id": 9
+    },
+    {
+      "firstname": "Michael ",
+      "lastname": "Johnson ",
+      "username": "queen33",
+      "state": "Anambra",
+      "age": "23",
+      "gender": "Female",
+      "email": "hermajesty@yahoo.com",
+      "password": "royal",
+      "field": "Writer",
+      "price": "$40 / hour",
+      "details": "I'm a real queen...",
+      "id": 10
     }
   ],
   "post": [],
