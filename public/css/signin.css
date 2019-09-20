@@ -1,7 +1,36 @@
 body {
-  padding-top: 40px;
-  padding-bottom: 40px;
-  background-color:rgb(69, 115, 212);
+  background-color: rgb(69, 115, 212);
+  margin: 0;
+  padding: 40px 0;
+}
+
+header {
+  color: #fff;
+  font-size: 20px;
+  font-weight: normal;
+  font-family: Verdana, Tahoma, sans-serif;
+  text-align: center;
+  padding: 10px 0;
+  margin: 20px 0 0;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+nav a:hover, h1 a:hover {
+  color: paleturquoise;
+}
+
+nav li {
+  display: inline-block;
+  float: none;
+}
+
+nav li a {
+  font-weight: 500;
+  padding: 15px 10px;
 }
 
 h1 {
@@ -14,8 +43,9 @@ h1 {
   padding: 15px;
   margin: 0 auto;
 }
-.form-signin-heading{
+.signin-heading{
   text-align: center;
+  color: aliceblue;
 }
 .form-signin .form-signin-heading,
 .form-signin .checkbox {
@@ -37,7 +67,7 @@ h1 {
   z-index: 2;
 }
 .form-signin input[type="email"] {
-  margin-bottom: -1px;
+  margin-bottom: 10px;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
@@ -45,4 +75,12 @@ h1 {
   margin-bottom: 10px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
+  margin-left: 28px;
 }
+
+.sr-only {
+  color: beige;
+  font-weight: 150;
+  font-style: inherit;
+}
+
